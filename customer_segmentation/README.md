@@ -2,6 +2,10 @@
 
 This subfolder contains Jupyter Notebooks covering use cases related to customer segmentation, a process that helps businesses understand and categorize their customers into different groups based on shared characteristics.
 
+## Datasets
+
+1. Demographic Segmentation: [Kaggle](https://www.kaggle.com/datasets/thedevastator/predicting-credit-card-customer-attrition-with-m)
+
 ## Repository Contents 📚
 
 1. Demographic Segmentation
