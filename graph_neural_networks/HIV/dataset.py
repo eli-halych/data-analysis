@@ -23,7 +23,7 @@ grid = Draw.MolsToGridImage(sample_mols,
 grid
 # %% Create a dataset
 import torch
-from torch.utils.data import Dataset, Data
+from torch_geometric.data import Dataset, Data
 import numpy as np
 import os
 from rdkit.Chem import rdmolops
@@ -54,7 +54,7 @@ class MoleculeDataset(Dataset):
         Raises:
             NotImplementedError.
         """
-        raise NotImplementedError("Not Implemented.")
+        return ['not_implemented.pt']
 
     def download(self):
         """Download to `self.raw_dir`."""
@@ -145,6 +145,9 @@ class MoleculeDataset(Dataset):
     
     def _get_adjacency_info(self, mol):
         """ Get the adjacency information of the molecule.
+        
+        The matrix is of the shape [Number of nodes, number of nodes].
+        It is then converted to the COO format.
 
         Args:
             mol: rdkit mol object.
